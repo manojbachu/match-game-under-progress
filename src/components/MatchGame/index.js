@@ -19,10 +19,13 @@ class MatchGame extends Component {
     const filteredThumbnails = imagesList.filter(
       eachThumbnail => eachThumbnail.category === category,
     )
+    return filteredThumbnails
   }
 
   render() {
+    const {category} = this.state
     const {imagesList, tabsList} = this.props
+    const filteredThumbnails = this.getFilteredThumbnails()
     return (
       <div className="app-container">
         <div className="navbar-container">
@@ -57,11 +60,12 @@ class MatchGame extends Component {
                 tabDetails={eachTab}
                 key={eachTab.tabId}
                 onClickTab={this.onClickTab}
+                isActive={category === eachTab.tabId}
               />
             ))}
           </ul>
           <ul className="thumbnail-list-container">
-            {imagesList.map(eachImage => (
+            {filteredThumbnails.map(eachImage => (
               <Thumbnail imageDetails={eachImage} key={eachImage.id} />
             ))}
           </ul>
