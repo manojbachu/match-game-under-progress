@@ -13,3 +13,9 @@
   font-size: 20px;
   margin: 12px;
 }
+
+.active-thumbnail {
+  border-bottom: 3px solid #fec653;
+  padding-bottom: 5px;
+  color: #fec653;
+}
