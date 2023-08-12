@@ -1,0 +1,15 @@
+.tab-item {
+  list-style-type: none;
+}
+
+.tab-button {
+  background: none;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 20px;
+  margin: 12px;
+}
